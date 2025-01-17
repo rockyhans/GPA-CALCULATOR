@@ -7,25 +7,6 @@ import Footer from "./Footer";
 function Home() {
   return (
     <>
-      {/* 702239816951-s4o5q1p08097pn9p2qbtomiqo8suictm.apps.googleusercontent.com */}
-      {/* 702239816951-s4o5q1p08097pn9p2qbtomiqo8suictm.apps.googleusercontent.com */}
-      {/* reference token --
-      1//04cbWn4L8kQ9oCgYIARAAGAQSNwF-L9Ir7Uu2LdT72DXplTuwiFTxAU1ZvQh3Wtqltf9CYF0JF7vNlDU750UynNzOJtk6XEEIIRc
-      access tocken -- ---
-      ya29.a0ARW5m772ferjWqWZglchGBM-iKsLhJxhZ6K8Z7F3LU0NfB10VsDkTiE1Ks-47jcdWJ1qTEr-04XUhi9cBvndWxfowPFv6qHVFHDFynUyuNqeNSauBpmFxEvmUwCKK7dr6BjP4Y75kvqd9JRbUcNuHKF4nxsT79YL9EJkjYDkaCgYKAYASARISFQHGX2Mis9Zu4vaySRl14oZqoTAwgw0175
- */}
-
-
-
-
-
-
-
-
-
-
-
-
       <div className="mainPage">
         <Navbar />
         <div className="mainPage1">
