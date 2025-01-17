@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./sgpaCal.css"; // SgpaCal CSS file
+import "./sgpaCal.css"; 
 
 function SgpaCal() {
   const [subjectCount, setSubjectCount] = useState(0);
@@ -35,42 +35,53 @@ function SgpaCal() {
 
   const generateSubjectInputs = () => {
     return grades.map((subject, index) => (
-      <div key={index} className="inputbox">
-        <select
-          name={`grade-${index}`}
-          className="input1 inputS"
-          value={subject.grade}
-          onChange={(e) => handleGradeChange(index, "grade", e.target.value)}
-        >
-          <option value="">&nbsp;Grade</option>
-          <option value="O">&nbsp;O</option>
-          <option value="APlus">&nbsp;A+</option>
-          <option value="A">&nbsp;A</option>
-          <option value="BPlus">&nbsp;B+</option>
-          <option value="B">&nbsp;B</option>
-          <option value="F">&nbsp;F</option>
-        </select>
+      <>
+        <div key={index} className="inputbox">
+          <div className="inpBox1">
+            <input className="Inp" type="text" placeholder="Subject Name" />
+            <select
+              name={`grade-${index}`}
+              className="Inp"
+              value={subject.grade}
+              onChange={(e) =>
+                handleGradeChange(index, "grade", e.target.value)
+              }
+            >
+              <option value="">&nbsp;Grade</option>
+              <option value="O">&nbsp;O</option>
+              <option value="APlus">&nbsp;A+</option>
+              <option value="A">&nbsp;A</option>
+              <option value="BPlus">&nbsp;B+</option>
+              <option value="B">&nbsp;B</option>
+              <option value="F">&nbsp;F</option>
+            </select>
+          </div>
+          <div className="inpBox1">
+            <input
+              className="Inp"
+              type="number"
+              name={`credit-${index}`}
+              value={subject.credit !== 0 ? subject.credit : ""}
+              onChange={(e) =>
+                handleGradeChange(
+                  index,
+                  "credit",
+                  parseFloat(e.target.value) || 0
+                )
+              }
+              placeholder="Credits"
+            />
 
-        <input
-          className="input1"
-          type="number"
-          value={subject.grade ? gradeToPoints[subject.grade] : ""}
-          disabled
-          placeholder="Points"
-        />
-        <input
-          className="input1"
-          type="number"
-          name={`credit-${index}`}
-          value={subject.credit !== 0 ? subject.credit : ""}
-          onChange={(e) =>
-            handleGradeChange(index, "credit", parseFloat(e.target.value) || 0)
-          }
-          placeholder="Credits"
-        />
-        <br />
-        <br />
-      </div>
+            <input
+              className="Inp Inp1"
+              type="number"
+              value={subject.grade ? gradeToPoints[subject.grade] : ""}
+              disabled
+              placeholder="Points"
+            />
+          </div>
+        </div>
+      </>
     ));
   };
 
@@ -98,64 +109,52 @@ function SgpaCal() {
   };
 
   return (
-    <div>
-      <div className="mainPage">
-        <main>
-          <div className="calculator">
-            <form onSubmit={handleSgpaSubmit}>
-              <h2>
-                <u>SGPA CALCULATOR</u>
-              </h2>
-              <br />
-              <div id="sub">
-                <h3 id="sta1">NUMBER OF SUBJECTS :</h3>
-                <input
-                  className="sunNum"
-                  type="number"
-                  value={subjectCount}
-                  onChange={handleSubjectCountChange}
-                />
-              </div>
-              {generateSubjectInputs()}
-              <button type="submit" id="submit">
+    <div className="sgpaCal">
+      <div className="mainDiv">
+        <h2>
+          <u>SGPA CALCULATOR</u>
+        </h2>
+        <div className="div1">
+          <h3>Number of Subject:</h3>
+          <input
+            className="sunNum"
+            type="number"
+            value={subjectCount}
+            onChange={handleSubjectCountChange}
+          />
+        </div>
+        <form onSubmit={handleSgpaSubmit}>
+          <div className="inputDiv scrollable-form">
+            {generateSubjectInputs()}
+          </div>
+          <button type="submit" id="submit">
+            <div className="sub-text">
+              <b> Submit </b>
+            </div>
+          </button>
+        </form>
+
+        {sgpa !== null && (
+          <div id="sgpa">
+            <h3>
+              YOUR SGPA IS &nbsp;{sgpa}&nbsp;, YOUR PERCENTAGE IS &nbsp;
+              {percentage}%&nbsp;
+            </h3>
+            <Link to="/fibe">
+              <button className="saveBtn">
                 <div className="sub-text">
-                  <b> SUBMIT </b>
+                  <b> Save </b>
                 </div>
               </button>
-              <br />
-              <br />
-            </form>
-            {sgpa !== null && (
-              <div>
-                <div id="sgpa">
-                  <br />
-                  <h2>
-                    <u> &nbsp;CONGRATULATION ! &nbsp;</u>
-                  </h2>
-                  <br />
-                  <h3>&nbsp; YOUR SGPA IS : &nbsp;</h3>
-                  <br />
-                  <div className="sgpa-show">
-                    <p id="show">{sgpa}</p>
-                  </div>
-                  <br />
-                  <h3> &nbsp;YOUR PERCENTAGE IS , &nbsp;</h3>
-                  <br />
-                  <div className="percentage-show sgpa-show">
-                    <p id="percentage">{percentage}%</p>
-                  </div>
-                  <br />
-                </div>
-                <br />
-                <br />
-              </div>
-            )}
+            </Link>
           </div>
-        </main>
+        )}
       </div>
-      <br />
-      <br />
-      <div className="navigation">
+
+      <div
+        className="navigation"
+        style={{ paddingBottom: "15px", paddingTop: "15px", margin: "0px" }}
+      >
         <Link to="/" className="nav-link">
           <div className="bo-text">
             <b> &nbsp; HOME &nbsp;</b>

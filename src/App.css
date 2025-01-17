@@ -1,6 +1,15 @@
 body {
-  background-color: #232323;
+  
+  background-color: rgb(57, 56, 56);
   color: aliceblue;
+}
+
+@media (max-width: 768px) {
+
+  body {
+  
+    color: aliceblue;
+  }
 }
 
 .inputbox1 {
@@ -35,3 +44,55 @@ body {
     margin-right: 0;
   }
 }
+
+
+
+
+.error-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-content {
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(10, 10, 10);
+  border-radius: 8px;
+}
+
+.error-title {
+  font-size: 6rem;
+  margin: 0;
+  color: #ff6b6b;
+}
+
+.error-message {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: snow;
+}
+
+.error-description {
+  font-size: 1rem;
+  margin: 15px 0 25px;
+  color: snow;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.home-link:hover {
+  background-color: rgba(128, 128, 128, 0.662);
+}
+

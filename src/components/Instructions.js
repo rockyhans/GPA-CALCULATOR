@@ -4,31 +4,34 @@ import "./instructions.css"; // mainPage CSS file
 
 function mainPages() {
   return (
-    <div>
-      <div className="mainPage">
+    <div className="instruct">
+      <h1>
+        <u>Instructions:</u>
+      </h1>
+
+      <div className="instPage1">
         <h2>
-          <u>SGPA Calculator (Semester Grade Point Average)</u>
+          <u>SGPA Calculator (Semester Grade Point Average):</u>
         </h2>
-        <br/>
         <section id="calculation">
-          <h3 id="in1">1. Illustration of calculation of SGPA</h3>
-          <h3 id="in1">2. Declaration of results</h3>
-          <h4>What is an SGPA Calculator?</h4>
+          <h4 id="in1">1. Illustration of calculation of SGPA</h4>
+          <h4 id="in1">2. Declaration of results</h4>
+          <h3>What is an SGPA Calculator?</h3>
           <p>
             In simple terms, a calculator is used to calculate a specific value
-            after mathematical operations. Likewise, an SGPA-to-
-            calculator is a tool or specially-designed calculator that converts
-            the SGPA (Semester Grade Point Average) grade points to 
-            values. These conversions are usually used in the education field.
+            after mathematical operations. Likewise, an SGPA-to- calculator is a
+            tool or specially-designed calculator that converts the SGPA
+            (Semester Grade Point Average) grade points to values. These
+            conversions are usually used in the education field.
           </p>
-          <h4>What is SGPA?</h4>
-          <div style={{ color: "rgb(3, 201, 3)" }}>
+          <h3>What is SGPA?</h3>
+          <div>
             The full form of SGPA is Semester Grade Point Average. This grading
             parameter is used by institutions to give the performance grading of
             students for a semester. SGPA is most widely used by colleges or
             institutions but is not common for all of them. Hence, a calculator
-            to convert these SGPA points into s is always needed or
-            asked by students.
+            to convert these SGPA points into s is always needed or asked by
+            students.
             <ul>
               <li>
                 <strong>Semester:</strong> The semester is of 6 months and
@@ -56,39 +59,30 @@ function mainPages() {
             for a particular semester from these credit points before converting
             them into s.
           </p>
-          {/* <div className="centerDiv">
-            <img
-              alt="JHTUH"
-              src="https://www.jntufastupdates.com/wp-content/uploads/2017/03/jntuh-sgpa.png"
-              className="idpho1"
-            />
-          </div> */}
-          <br />
         </section>
       </div>
-      <div className="mainPage">
+      <div className="instPage1">
         <h2 id="inst1">
           <u>CGPA Calculator (Cumulative Grade Point Average)</u>
         </h2>
-        <br/>
+
         <section id="calculation">
-          <h3>1. Illustration of Calculation of CGPA</h3>
-          <h3>2. Declaration of Results</h3>
-          <h4>What is an SGPA   Calculator?</h4>
+          <h4>1. Illustration of Calculation of CGPA</h4>
+          <h4>2. Declaration of Results</h4>
+          <h3>What is an SGPA Calculator?</h3>
           <p>
             Just like SGPA, CGPA is used to declare the cumulative academic
             results of students over their course duration. It reflects their
             overall performance and learning capabilities throughout the entire
-            program. A CGPA-to- calculator is a tool designed to
-            convert the CGPA (Cumulative Grade Point Average) into a 
-            format. This conversion is often required by educational
-            institutions or employers who prefer to understand a student's
-            performance in  terms rather than grade points. The
-            conversion formula may vary across different institutions, but a
-            common method is using a multiplier.
+            program. A CGPA-to- calculator is a tool designed to convert the
+            CGPA (Cumulative Grade Point Average) into a format. This conversion
+            is often required by educational institutions or employers who
+            prefer to understand a student's performance in terms rather than
+            grade points. The conversion formula may vary across different
+            institutions, but a common method is using a multiplier.
           </p>
           <h4>What is CGPA?</h4>
-          <div style={{ color: "rgb(3, 201, 3)" }}>
+          <div>
             The full form of CGPA is Cumulative Grade Point Average. CGPA is a
             grading system used by educational institutions to give a cumulative
             performance grading of students over the entire duration of their
@@ -118,26 +112,17 @@ function mainPages() {
           <p>
             To calculate CGPA, take the sum of SGPAs of all semesters and divide
             it by the number of semesters. The result will give you the CGPA.
-            This CGPA can then be converted into a  using the
-            appropriate conversion formula specific to the educational
-            institution.
+            This CGPA can then be converted into a using the appropriate
+            conversion formula specific to the educational institution.
           </p>
-          {/* <div className="centerDiv">
-            <img
-              alt="JHTUH"
-              src="https://www.jntufastupdates.com/wp-content/uploads/2017/03/jntuh-cgpa.png"
-              className="idpho1"
-            /> 
-          </div>*/}
-          <br />
         </section>
       </div>
 
-      <div className="mainPage">
+      <div className="instPage1">
         <div>
           <h3 className="mar1">Where do we need SGPA/CGPAS in our life?</h3>
           <section id="calculation">
-            <div style={{ color: "rgb(3, 201, 3)" }}>
+            <div>
               <ul>
                 <li>
                   Imagine a scenario where your result just got out and you want
@@ -160,9 +145,9 @@ function mainPages() {
                 </li>
               </ul>
             </div>
-            <h3 className="margin"> Difference Between SGPA and CGPA </h3>
+            <h3 className="mar1"> Difference Between SGPA and CGPA </h3>
 
-            <div style={{ color: "rgb(3, 201, 3)" }}>
+            <div>
               <ul>
                 <li>
                   {" "}
@@ -198,30 +183,17 @@ function mainPages() {
               </ul>
             </div>
           </section>
-          <br />
         </div>
       </div>
-
-      {/* <div className="mainPage">
-        <h3 id="inst1" className="mar1">
-          <u>JNTUH CALCULATIONS SGPA & CGPA</u>
-        </h3>
-        <div id="fcal">
-          <div className="cal"></div>
-          <div className="cal1"></div>
-        </div>
-        <br />
-      </div> */}
 
       <div className="wrapper two">
         <div className="neon">
-          <h1 id="thank">THANK YOU</h1>
-          <br />
-          <br />
+          <h1 id="thank" style={{ border: "none" }}>
+            THANK YOU
+          </h1>
         </div>
       </div>
-      <br />
-      <br />
+
       <div className="navigation">
         <Link to="/" className="nav-link">
           <div className="bo-text">

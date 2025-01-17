@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import "./cgpaCal.css"; // CgpaCal CSS file
+import "./sgpaCal.css";
 
 function CgpaCal() {
   const [semesterCount, setSemesterCount] = useState(0);
@@ -26,20 +27,28 @@ function CgpaCal() {
 
   const generateSemesterInputs = () => {
     return semesters.map((semester, index) => (
-      <div key={index} className="inputbox1">
+      <>
+      <div key={index} className="inputbox inputboxCgpa">
+        <div  className="inputboxSgpa1">
         <input
-          className="input1"
+          className="Inp"
+          type="number"         
+          placeholder="Semester Num"
+        />
+        </div>
+        <div className="inputboxSgpa2">
+        <input
+          className="Inp"
           type="number"
           name={`sgpa-${index}`}
           value={semester.sgpa}
           onChange={(e) =>
             handleSemesterChange(index, "sgpa", parseFloat(e.target.value) || 0)
           }
-          placeholder="SGPA"
+          placeholder=" Sem SGPA"
         />
-
         <input
-          className="input1"
+          className="Inp"
           type="number"
           name={`credits-${index}`}
           value={semester.credits !== 0 ? semester.credits : ""}
@@ -52,9 +61,10 @@ function CgpaCal() {
           }
           placeholder="Credits"
         />
-        <br />
-        <br />
+        </div>
+        
       </div>
+      </>
     ));
   };
 
@@ -81,64 +91,55 @@ function CgpaCal() {
   };
 
   return (
-    <div>
-      <div className="mainPage">
-        <main>
-          <div className="calculator">
-            <form onSubmit={handleCgpaSubmit}>
-              <h2>
-                <u>CGPA CALCULATOR</u>
-              </h2>
-              <br />
-              <div id="sub">
-                <h3 id="sta1">NUMBER OF SEMESTERS :</h3>
-                <input
-                  className="sunNum"
-                  type="number"
-                  value={semesterCount}
-                  onChange={handleSemesterCountChange}
-                />
-              </div>
-              {generateSemesterInputs()}
-              <button type="submit" id="submit">
+    <div className="sgpaCal">
+      <div className="mainDiv">
+        <h2>
+          <u>CGPA CALCULATOR</u>
+        </h2>
+
+        <div className="div1">
+          <h3>Number of Semester:</h3>
+          <input
+            className="sunNum"
+            type="number"
+            value={semesterCount}
+            onChange={handleSemesterCountChange}
+          />
+        </div>
+
+        <form onSubmit={handleCgpaSubmit}>
+          <div className="inputDiv scrollable-form">
+            {generateSemesterInputs()}
+          </div>
+          <button type="submit" id="submit">
+            <div className="sub-text">
+              <b> Submit </b>
+            </div>
+          </button>
+        </form>
+
+        {cgpa !== null && (
+          <div id="sgpa">
+            <h3>
+              &nbsp; YOUR CGPA IS &nbsp;
+              {cgpa} &nbsp;, YOUR PERCENTAGE IS &nbsp;
+              {percentage}%
+            </h3>
+            <Link to="/fibe">
+              <button className="saveBtn">
                 <div className="sub-text">
-                  <b> SUBMIT </b>
+                  <b> Save </b>
                 </div>
               </button>
-              <br />
-              <br />
-            </form>
-            {cgpa !== null && (
-              <div>
-                <div id="sgpa" className="animated-border-box">
-                  <br />
-                  <h2>
-                    <u> &nbsp; CONGRATULATIONS! &nbsp; </u>
-                  </h2>
-                  <br />
-                  <h3> &nbsp; YOUR CGPA IS : &nbsp; </h3>
-                  <br />
-                  <div className="sgpa-show">
-                    <p id="show">{cgpa}</p>
-                  </div>
-                  <br />
-                  <h3> &nbsp; YOUR PERCENTAGE IS : &nbsp;</h3>
-                  <br />
-                  <div className="percentage-show sgpa-show">
-                    <p id="percentage">{percentage}%</p>
-                  </div>
-                  <br />
-                </div>
-                <br />
-                <br />
-              </div>
-            )}
+            </Link>
           </div>
-        </main>
+        )}
       </div>
-      <br />
-      <br />
-      <div className="navigation">
+
+      <div
+        className="navigation"
+        style={{ paddingBottom: "15px", paddingTop: "15px", margin: "0px" }}
+      >
         <Link to="/" className="nav-link">
           <div className="bo-text">
             <b> &nbsp; HOME &nbsp;</b>
