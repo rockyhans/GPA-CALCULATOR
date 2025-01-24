@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Instructions from "./components/Instructions";
 import "./App.css";
 import SgpaCal from "./components/SgpaCal";
@@ -19,30 +14,26 @@ import SignUp from "./componentsX/SignUp";
 import FirstPage from "./componentsX/FirstPage";
 import Userdata from "./componentsX/Userdata";
 
-const isGitHubPages = window.location.hostname === "rockyhans.github.io";
-
-function App() {
+const App = () => {
   return (
-    <>
-      <Router basename={isGitHubPages ? "/GPA-CALCULATOR" : ""}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/instructions" element={<Instructions />} />
-          <Route path="/SgpaCal" element={<SgpaCal />} />
-          <Route path="/CgpaCal" element={<CgpaCal />} />
-          <Route path="/profile" element={<ReviewForm />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/firstpage" element={<FirstPage />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/sgpa" element={<SGPAForm />} />
-          <Route path="/cgpa" element={<CGPAForm />} />
-          <Route path="/userdata" element={<Userdata />} />
-          <Route path="*" element={<Navigate to="/" />} />{" "}
-        </Routes>
-      </Router>
-    </>
+    <BrowserRouter basename="/GPA-CALCULATOR">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/SgpaCal" element={<SgpaCal />} />
+        <Route path="/CgpaCal" element={<CgpaCal />} />
+        <Route path="/profile" element={<ReviewForm />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/firstpage" element={<FirstPage />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sgpa" element={<SGPAForm />} />
+        <Route path="/cgpa" element={<CGPAForm />} />
+        <Route path="/userdata" element={<Userdata />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
