@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/GPA-CALCULATOR/static/css/main.7e4434d0.css",
+    "main.js": "/GPA-CALCULATOR/static/js/main.22ab583d.js",
+    "static/js/453.ed3810f9.chunk.js": "/GPA-CALCULATOR/static/js/453.ed3810f9.chunk.js",
+    "static/media/h1.jpg": "/GPA-CALCULATOR/static/media/h1.8970fb750e67cc8e532f.jpg",
+    "static/media/SGPA-Calculator-2.webp": "/GPA-CALCULATOR/static/media/SGPA-Calculator-2.2f3d6765ea26a30188ae.webp",
+    "static/media/image.jpg": "/GPA-CALCULATOR/static/media/image.8768d3d760457d75322d.jpg",
+    "index.html": "/GPA-CALCULATOR/index.html",
+    "main.7e4434d0.css.map": "/GPA-CALCULATOR/static/css/main.7e4434d0.css.map",
+    "main.22ab583d.js.map": "/GPA-CALCULATOR/static/js/main.22ab583d.js.map",
+    "453.ed3810f9.chunk.js.map": "/GPA-CALCULATOR/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e4434d0.css",
+    "static/js/main.22ab583d.js"
+  ]
+}
