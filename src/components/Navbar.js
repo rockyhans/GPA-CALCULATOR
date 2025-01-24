@@ -5,11 +5,11 @@ function Navbar() {
   return (
     <>
       <div className="xyx">
-        <p>
+        <h2 style={{ border: "none" }}>
           <u>
             <b>Easy SGPA & CGPA Calculator</b>
           </u>
-        </p>
+        </h2>
       </div>
     </>
   );

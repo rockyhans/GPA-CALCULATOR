@@ -115,7 +115,7 @@ function SgpaCal() {
           <u>SGPA CALCULATOR</u>
         </h2>
         <div className="div1">
-          <h3>Number of Subject:</h3>
+          <h3>Enter number of Subject:</h3>
           <input
             className="sunNum"
             type="number"
@@ -140,7 +140,7 @@ function SgpaCal() {
               YOUR SGPA IS &nbsp;{sgpa}&nbsp;, YOUR PERCENTAGE IS &nbsp;
               {percentage}%&nbsp;
             </h3>
-            <Link to="/fibe">
+            <Link to="/profile"> 
               <button className="saveBtn">
                 <div className="sub-text">
                   <b> Save </b>

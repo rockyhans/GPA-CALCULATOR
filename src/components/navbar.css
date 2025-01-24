@@ -1,11 +1,5 @@
-u {
+u { 
   text-decoration-style: wavy;
-}
-
-.xyx p {
-  font-size: 1.6rem;
-  text-align: center;
-  margin-top: 7px;
 }
 
 .about {
@@ -26,12 +20,15 @@ u {
   justify-content: space-evenly;
 }
 
+.xyx h2 {
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
   .about {
     padding-bottom: 10px;
-    font-size: 1.1rem;
   }
-  .xyx p {
-    font-size: 1.1rem;
+  .xyx h2 {
+    font-size: 1.2rem;
   }
 }
